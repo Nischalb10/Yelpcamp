@@ -1,0 +1,57 @@
+<% layout('layouts/boilerplate')%>
+
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="row w-100">
+        <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+            <div class="card border-0 shadow-lg">
+                <div class="card-img-overlay-wrapper">
+                    <img src="https://images.unsplash.com/photo-1682687220742-aba13b6e50ba?auto=format&fit=crop&q=80"
+                        alt="Mountain landscape with tent" class="card-img-top login-img" />
+                    <div class="img-overlay"></div>
+                </div>
+                <div class="card-body p-5">
+                    <h3 class="card-title text-center mb-4 fw-bold">Welcome Back</h3>
+                    <form action="/login" method="POST" class="validated-form" novalidate>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold" for="username">USERNAME</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                                <input class="form-control" 
+                                       type="text" 
+                                       id="username" 
+                                       name="username" 
+                                       autofocus 
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold" for="password">PASSWORD</label>
+                            <div class="input-group">
+                                <span class="input-group-text">
+                                    <i class="fas fa-lock"></i>
+                                </span>
+                                <input class="form-control" 
+                                       type="password" 
+                                       id="password" 
+                                       name="password" 
+                                       required>
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button class="btn btn-login py-2 fw-bold">Sign In</button>
+                        </div>
+                    </form>
+                    
+                    <div class="register-section text-center">
+                        <p class="text-muted mb-2">Don't have an account?</p>
+                        <a href="/register" class="register-link">Create Account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
