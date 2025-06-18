@@ -1,0 +1,89 @@
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.login-container {
+    min-height: calc(100vh - 150px); /* Account for navbar and footer */
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.form-control {
+    padding: 0.75rem 0.75rem 0.75rem 45px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px !important;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #2D3436;
+    outline: none;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group-text {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #636e72;
+    z-index: 2;
+    padding: 0;
+}
+
+.btn-login {
+    background: #2D3436;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #1e2527;
+    transform: translateY(-1px);
+    color: white;
+}
+
+.register-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.register-link {
+    color: #2D3436;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link:hover {
+    color: #1e2527;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 2rem !important;
+    }
+}

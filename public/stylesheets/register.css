@@ -1,0 +1,146 @@
+/* Base styles */
+.register-container {
+    min-height: calc(100vh - 150px);
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Card styling */
+.card {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Image header */
+.card-img-overlay-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.register-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+}
+
+/* Form elements */
+.form-label {
+    color: #636e72;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group-text {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #636e72;
+    z-index: 2;
+    padding: 0;
+}
+
+.input-group-text i {
+    width: 16px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.form-control {
+    padding: 0.75rem 0.75rem 0.75rem 45px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px !important;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #2D3436;
+    outline: none;
+}
+
+/* Validation feedback */
+.valid-feedback {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    font-size: 0.8rem;
+    color: #198754;
+}
+
+/* Button styling */
+.btn-register {
+    background: #2D3436;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background: #1e2527;
+    transform: translateY(-1px);
+    color: white;
+}
+
+/* Login section */
+.login-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.login-link {
+    color: #2D3436;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.login-link:hover {
+    color: #1e2527;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 1rem;
+    }
+    
+    .card-img-overlay-wrapper {
+        height: 150px;
+    }
+    
+    .register-img {
+        height: 150px;
+    }
+    
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
