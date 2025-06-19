@@ -23,8 +23,9 @@ const reviewRoutes = require('./routes/reviews.js');
 const keepAlive = require('./utils/keepAlive');
 
 const MongoStore = require('connect-mongo');
-// 'mongodb://127.0.0.1:27017/yelp-camp'
-const dbUrl =  process.env.DB_URL;
+const dbUrl = process.env.NODE_ENV === "production" 
+    ? process.env.DB_URL
+    : 'mongodb://127.0.0.1:27017/yelp-camp';
 mongoose.set('strictQuery', true);
 mongoose.connect(dbUrl);
 

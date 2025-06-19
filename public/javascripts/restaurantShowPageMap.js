@@ -6,6 +6,13 @@ const map = new mapboxgl.Map({
   zoom: 10 // starting zoom
 });
 
+map.on('load', () => {
+    if (!restaurant.geometry.coordinates.length) {
+        map.setCenter([78.9629, 20.5937]); // Default to India's center
+        map.setZoom(4);
+    }
+});
+
 map.addControl(new mapboxgl.NavigationControl());
 
 
