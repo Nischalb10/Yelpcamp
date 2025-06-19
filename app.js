@@ -20,6 +20,7 @@ const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds.js');
 const restaurantRoutes = require('./routes/restaurants.js');
 const reviewRoutes = require('./routes/reviews.js');
+const keepAlive = require('./utils/keepAlive');
 
 const MongoStore = require('connect-mongo');
 // 'mongodb://127.0.0.1:27017/yelp-camp'
@@ -154,6 +155,11 @@ app.use((err,req,res,next)=>{
     if(!err.message) err.message = 'Oh no , Something went wrong!';
     res.status(statusCode).render('error',{err});
 });
+
+if (process.env.NODE_ENV === "production") {
+    const appUrl = process.env.APP_URL;
+    keepAlive(appUrl);
+}
 
 app.listen(3000,() =>{
     console.log("Serving on port 3000"); 
